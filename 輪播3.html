@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>部落格精選輪播</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    body {
+      background: #fafafa;
+      font-family: 'Noto Sans TC', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .blog-featured {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .blog-featured h2 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 32px;
+      letter-spacing: 2px;
+    }
+    .swiper-outer {
+      position: relative;
+      /* 預留箭頭空間 */
+      padding: 0 48px;
+    }
+    .blog-swiper {
+      /* 讓輪播內容不會超出外層 */
+      overflow: visible;
+    }
+    .swiper-slide {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-width: 320px;
+      border: 1px solid #e0e0e0;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 20px 18px 18px 18px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .tags {
+      margin-bottom: 8px;
+    }
+    .tags span {
+      background: #e3f2fd;
+      color: #1976d2;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      padding: 2px 8px;
+      margin-right: 4px;
+      font-weight: 500;
+      display: inline-block;
+    }
+    .badge {
+      background: #1976d2;
+      color: #fff;
+      font-size: 0.8rem;
+      margin-left: 4px;
+    }
+    .badge.popular {
+      background: #f50057;
+    }
+    .date {
+      font-size: 0.85rem;
+      color: #333;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .card-content h3 {
+      font-size: 1.1rem;
+      margin: 8px 0 8px 0;
+      font-weight: bold;
+      color: #222;
+      line-height: 1.5;
+    }
+    .card-content p {
+      font-size: 0.98rem;
+      color: #444;
+      margin-bottom: 12px;
+      line-height: 1.6;
+      flex: 1;
+    }
+    .read-more {
+      background: none;
+      color: #222;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      padding: 6px 16px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    .read-more:hover {
+      background: #1976d2;
+      color: #fff;
+      border-color: #1976d2;
+    }
+    /* 箭頭設在外層，絕對定位在輪播外側 */
+    .swiper-button-prev,
+    .swiper-button-next {
+      background: #1976d2;
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 20;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border: none;
+    }
+    .swiper-button-prev {
+      left: 0;
+    }
+    .swiper-button-next {
+      right: 0;
+    }
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      display: none;
+    }
+    @media (max-width: 900px) {
+      .swiper-slide {
+        min-width: 240px;
+      }
+      .blog-featured h2 {
+        font-size: 2rem;
+      }
+      .swiper-outer {
+        padding: 0 20px;
+      }
+    }
+    @media (max-width: 600px) {
+      .swiper-button-prev, .swiper-button-next {
+        display: none;
+      }
+      .blog-featured {
+        padding: 0 4px;
+      }
+      .swiper-outer {
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="blog-featured">
+    <h2>部落格精選</h2>
+    <div class="swiper-outer">
+      <div class="swiper blog-swiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="文章封面1" />
+            <div class="card-content">
+              <div class="tags">
+                <span>#前端開發</span>
+                <span>#職涯成長</span>
+                <span class="badge">最新文章</span>
+              </div>
+              <div class="date">2024/10/21</div>
+              <h3>自學前端不用怕：從零開始的三大關鍵</h3>
+              <p>菜鳥 Alyse 一年從零進階到職場前端的學習心法，一次大公開！</p>
+              <button class="read-more">閱讀全文</button>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="文章封面2" />
+            <div class="card-content">
+              <div class="tags">
+                <span>#面試準備</span>
+                <span>#工程師求職</span>
+                <span class="badge popular">人氣文章</span>
+              </div>
+              <div class="date">2024/07/08</div>
+              <h3>前端面試不再慌：破解常見提問的三大策略</h3>
+              <p>工程師面試最常見的三大問題與應答技巧，助你輕鬆通關。</p>
+              <button class="read-more">閱讀全文</button>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="文章封面3" />
+            <div class="card-content">
+              <div class="tags">
+                <span>#CSS設計</span>
+                <span>#視覺魔術</span>
+              </div>
+              <div class="date">2024/09/03</div>
+              <h3>CSS 魔法大揭密：排版與設計的三大關鍵技巧</h3>
+              <p>讓你的網頁設計更有質感，三個 CSS 排版與設計的實用技巧大公開。</p>
+              <button class="read-more">閱讀全文</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="文章封面3" />
+            <div class="card-content">
+              <div class="tags">
+                <span>#CSS設計</span>
+                <span>#視覺魔術</span>
+              </div>
+              <div class="date">2024/09/03</div>
+              <h3>CSS 魔法大揭密：排版與設計的三大關鍵技巧</h3>
+              <p>讓你的網頁設計更有質感，三個 CSS 排版與設計的實用技巧大公開。</p>
+              <button class="read-more">閱讀全文</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 箭頭放在 .swiper-outer 內，輪播外側 -->
+      <div class="swiper-button-prev"><span>&larr;</span></div>
+      <div class="swiper-button-next"><span>&rarr;</span></div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.blog-swiper', {
+      slidesPerView: 3,
+      spaceBetween: 24,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        900: {
+          slidesPerView: 3,
+        },
+        600: {
+          slidesPerView: 2,
+        },
+        0: {
+          slidesPerView: 1,
+        }
+      }
+    });
+  </script>
+</body>
+</html>

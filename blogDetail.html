@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* outline: solid; */
+            font-family: Noto Sans TC;
+            text-decoration: none;
+            list-style-type: none;
+            line-height: 1.5;
+            /* outline: auto; */
+        }
+
+        body {
+            max-width: 1920px;
+            margin: auto;
+        }
+
+        nav {
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav ul {
+            display: flex;
+            font-size: 28px;
+            line-height: 1.5;
+            justify-content: space-between;
+            font-weight: 700;
+            /* align-items: center; */
+            width: 180px;
+        }
+
+
+
+        .learning {
+            display: flex;
+            max-width: 1920px;
+            justify-content: space-between;
+            /* flex-wrap: wrap; */
+        }
+
+        @media (max-width: 768px) {
+            .learning {
+                flex-wrap: wrap;
+            }
+        }
+
+        .learning .left {
+            width: 948px;
+            min-height: 640px;
+            background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog/About%20Section.png?raw=true');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        @media (max-width: 768px) {
+            .learning .left {
+                width: 100%;
+                min-height: 375px;
+                background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/blog/About%20Section.png?raw=true');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+
+        .learning .right {
+            max-width: 948px;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            padding-right: 120px;
+            padding-left: 24px;
+        }
+
+
+
+        @media (max-width: 768px) {
+            .learning .right {
+                padding: 48px 12px;
+            }
+        }
+
+        .learning .right .date {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .learning .right .tag {
+            display: flex;
+            align-items: center;
+        }
+
+
+        .learning .right .tag a {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .learning .right .tag span {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 700;
+            background: #0027D5;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 24px;
+            margin-left: 8px;
+        }
+
+        .learning .right h2 {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .learning .right p {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .wrap {
+            max-width: 1920px;
+            /* padding: 80px 642px; */
+        }
+
+
+        .wrap .container {
+            max-width: 636px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .wrap .container {
+                margin: 0;
+                padding: 64px 12px;
+            }
+        }
+
+        /* #4B4B4B */
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="">首頁</a></li>
+            <li><a href="">部落格</a></li>
+        </ul>
+    </nav>
+    <!-- https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section.png?raw=true -->
+    <main>
+
+        <div class="learning">
+            <div class="left"></div>
+            <div class="right">
+                <div class="date">2024/10/21</div>
+                <div class="tag"><a href="">前端開發 x 職涯成長</a><a href=""></a><span>最新文章</span></div>
+                <h2>自學前端不用怕：從零開始的三大關鍵</h2>
+            </div>
+        </div>
+
+        <div class="wrap">
+            <div class="container">
+                <div>
+                    <h2>前言</h2>
+                    <p>嗨，我是 Alyse，一名前端工程師兼職涯諮詢師。一直以來，我都很喜歡在部落格分享學習與工作心得，也常有讀者問：「我想轉職/自學前端，該從哪裡開始？」 
+                        其實自學的過程既自由又具挑戰性。我整理了三大關鍵，幫助你在短期內建立紮實基礎，並快速累積實戰經驗。希望能替你的前端之路帶來一些啟發與動力！</p>
+                </div>
+
+                <div>
+                    <div class="img"></div>
+                    <h2>打好基礎：HTML、CSS、JavaScript</h2>
+                    <h3>HTML 與語意化</h3>
+                    <div>
+                        <p>為何重要：HTML 是網頁結構的根基，語意化寫法（如 header, main, footer 等）能讓網頁更具可維護性與 SEO 效益。</p>
+
+                        <h4>建議做法：</h4>
+                        <ul>
+                            <li>學習常見標籤的用途與屬性，如&lt;section&gt;、&lt;article&gt;、&lt;nav&gt;。
+
+                            </li>
+                            <li>善用 MDN、W3Schools 等官方文件，找尋範例程式碼並練習。</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

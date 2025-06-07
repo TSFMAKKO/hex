@@ -113,6 +113,7 @@
             <div class="contact">聯繫我，取得更多資訊！</div>
         </div>
 
+        
         <div class="blog">
             <h2>部落格精選</h2>
             <div class="container">
@@ -145,6 +146,8 @@
 
             </div>
         </div>
+
+    
 
         <hr>
 
@@ -283,9 +286,19 @@
         </div>
         <p class="copyRight">© 2025 Alyse Wang. All rights reserved.</p>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
     </script>
 </body>
 

@@ -7,7 +7,7 @@
             text-decoration: none;
             list-style-type: none;
             line-height: 1.5;
-            outline: auto;
+            /* outline: auto; */
         }
 
         body {
@@ -314,12 +314,12 @@
         @media (max-width: 768px) {
             .subscribe .right {
                 width: 100%;
-                
+
                 padding: 12px;
             }
         }
 
-        .subscribe .right .subscribeContent{
+        .subscribe .right .subscribeContent {
             width: 800px;
             padding: 80px;
             height: 490px;
@@ -337,7 +337,7 @@
             }
         }
 
-        .subscribe .right .subscribeContent div:nth-child(2) div:nth-child(2)  {
+        .subscribe .right .subscribeContent div:nth-child(2) div:nth-child(2) {
             margin-top: 10px;
         }
 
@@ -345,6 +345,7 @@
             font-weight: 700;
             font-size: 64px;
         }
+
         @media (max-width: 768px) {
             .subscribe h2 {
                 font-size: 40px;
@@ -358,8 +359,9 @@
             font-size: 20px;
 
         }
-        
+
         @media (max-width: 768px) {
+
             .subscribe p,
             .subscribe input {
                 width: 100%;
@@ -485,7 +487,7 @@
             padding: 24px;
         }
 
-        .blog{
+        .blog {
             width: 1920px;
             padding: 80px 312px;
             display: flex;
@@ -493,30 +495,31 @@
             justify-content: space-between;
         }
 
-        .blog h2{
+        .blog h2 {
             font-size: 64px;
             font-weight: 700;
         }
-        .blog .container{
+
+        .blog .container {
             display: flex;
             justify-content: space-between;
         }
 
-        .blog .blogContent{
+        .blog .blogContent {
             width: 416px;
         }
 
-        .blog .container img{
+        .blog .container img {
             width: 100%;
             height: 100%;
         }
 
-        .blog .container .img{
+        .blog .container .img {
             width: 100%;
         }
 
 
-        .careerConsulting{
+        .careerConsulting {
             max-width: 1920px;
             /* height: 1262px; */
             padding: 80px 312px;
@@ -524,13 +527,14 @@
             flex-direction: column;
             justify-content: space-between;  */
         }
+
         @media (max-width: 768px) {
-            .careerConsulting{
+            .careerConsulting {
                 padding: 64px 12px;
             }
         }
 
-        .careerConsulting h2{
+        .careerConsulting h2 {
             font-size: 64px;
             font-weight: 700;
         }
@@ -600,4 +604,71 @@
 
 
 
+        }
+
+        .swiper {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 隱藏預設箭頭文字 */
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: transparent;
+            width: 44px;
+            height: 44px;
+            top: 50%;
+            margin-top: -22px;
+            position: absolute;
+            cursor: pointer;
+            background-size: 44px 44px;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 10;
+        }
+
+        /* 左箭頭圖片 */
+        .swiper-button-prev {
+            left: 10px;
+            background-image: url('https://cdn-icons-png.flaticon.com/512/271/271220.png');
+        }
+
+        /* 右箭頭圖片 */
+        .swiper-button-next {
+            right: 10px;
+            background-image: url('https://cdn-icons-png.flaticon.com/512/271/271228.png');
+        }
+
+        /* 手機版按鈕移到底部左右 */
+        @media (max-width: 767px) {
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                top: auto;
+                bottom: 10px;
+                margin-top: 0;
+                width: 40px;
+                height: 40px;
+                background-size: 40px 40px;
+                background-color: rgba(255, 255, 255, 0.9);
+                border-radius: 50%;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            }
+
+            .swiper-button-prev {
+                left: 30%;
+            }
+
+            .swiper-button-next {
+                right: 30%;
+            }
         }

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* outline: solid; */
+            font-family: Noto Sans TC;
+            text-decoration: none;
+            list-style-type: none;
+            line-height: 1.5;
+            /* outline: auto; */
+        }
+
+        body {
+            max-width: 1920px;
+            margin: auto;
+        }
+
+        nav {
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav ul {
+            display: flex;
+            font-size: 28px;
+            line-height: 1.5;
+            justify-content: space-between;
+            font-weight: 700;
+            /* align-items: center; */
+            width: 180px;
+        }
+
+
+        .banner {
+            display: flex;
+        }
+
+        .banner .left {
+            width: 50%;
+            background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section.png?raw=true');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* img {
+            width: 100%;
+            height: auto;
+        } */
+
+        .banner .right {
+            width: 50%;
+            padding: 300px 80px;
+            background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @media (max-width: 768px) {
+            .banner {
+                flex-direction: column;
+            }
+
+            .banner .left {
+                width: 100%;
+                background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/index/Hero%20Section.png?raw=true');
+                min-height: 375px;
+                /* background-repeat: no-repeat; */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                /* 根據需求也可用 contain */
+            }
+
+            .banner .right {
+                width: 100%;
+                padding: 24px;
+                background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/index/Hero%20Section2.png?raw=true');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+
+        }
+
+        .banner .right .text h1 {
+            font-size: 120px;
+            font-weight: 900;
+            color: #0027D5;
+        }
+
+        @media (max-width: 768px) {
+            .banner .right .text h1 {
+                font-size: 52px;
+            }
+        }
+
+        .banner .right .text p {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0027D5;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="">首頁</a></li>
+            <li><a href="">部落格</a></li>
+        </ul>
+    </nav>
+    <!-- https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section.png?raw=true -->
+    <main>
+        <div class="banner">
+            <div class="left">
+                <!-- <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section.png?raw=true"
+                    alt=""> -->
+            </div>
+            <div class="right">
+                <div class="text">
+                    <h1>BLOG</h1>
+                    <p>前端工程師 & 職涯諮詢師</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
