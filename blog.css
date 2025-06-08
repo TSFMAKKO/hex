@@ -1,0 +1,156 @@
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Noto Sans TC;
+            text-decoration: none;
+            list-style-type: none;
+            line-height: 1.5;
+        }
+
+        body {
+            width: 1920px;
+            margin: 0 auto;
+        }
+
+        .swiper {
+            width: 100%;
+            /* width: 90%; */
+            height: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            /* height: 100%; */
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog {
+            position: relative;
+            width: 1432px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .blog .date{
+            margin-top: 16px;
+        }
+
+        .blog h2 {
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            /* margin-left: 68px; */
+        }
+
+        .blog .tag{
+            margin-top: 4px;
+        }
+
+        .blog .tag *:not(:first-child){
+            margin-left: 8px;
+            color: #000;
+        }
+
+        .blog p{
+            margin-top: 8px;
+        }
+
+        .blog .read{
+            margin-top: 16px;
+            padding: 8px 16px;
+            border-radius: 40px;
+            border: 1px solid #000;
+            display: inline-block;
+            margin-left: 1px;
+        }
+
+        .blog .read a{
+            text-decoration: none;
+            color: #000;
+        }
+
+        .blogContainer {
+            position: relative;
+            width: 100%;
+            /* height: 100%; */
+            height: 476px;
+        }
+
+        /* 隱藏預設箭頭文字 */
+        .button-prev,
+        .button-next {
+            width: 44px;
+            height: 44px;
+            /* color: transparent; */
+            color: white;
+            background-color: #0027D5;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            border-radius: 50%;
+            /* width: 44px;
+            height: 44px; */
+            padding: 10px;
+
+            top: 50%;
+            margin-top: -22px;
+            position: absolute;
+            cursor: pointer;
+            z-index: 10;
+            top: 50%;
+            /* top: 20%; */
+            transform: translateY(-50%);
+        }
+
+        .button-prev i,
+        .button-next i {
+            font-size: 30px;
+            /* padding: 0 7px; */
+            margin: 0 7px;
+        }
+
+        /* 左箭頭圖片 */
+        .button-prev {
+            left: -100px;     }
+
+        /* 右箭頭圖片 */
+        .button-next {
+            right: -100px;
+        }
+
+        /* 手機版按鈕移到底部左右 */
+        @media (max-width: 767px) {
+
+            .button-prev,
+            .button-next {
+                top: auto;
+                bottom: 10px;
+                margin-top: 0;
+                width: 40px;
+                height: 40px;
+                background-size: 40px 40px;
+                background-color: rgba(255, 255, 255, 0.9);
+                border-radius: 50%;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            }
+
+            .button-prev {
+                left: 30%;
+            }
+
+            .button-next {
+                right: 30%;
+            }
+        }
+
+        .blog .swiper-button-disabled{
+            background-color: #B2BEF2;
+            opacity: 0.8;
+        }
