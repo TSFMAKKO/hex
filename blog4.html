@@ -238,6 +238,13 @@
             font-size: 24px;
             font-weight: 500;
             margin-top: 4px;
+            /* 限制一行 */
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            /* 顯示最多 2 行 */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .searchArticles .searchBox {
@@ -279,10 +286,18 @@
 
         .article h2 {
             height: 72px;
+            /* 限制兩行 */
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            /* 顯示最多 2 行 */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .article p {
             /* min-height: 48px; */
+            /* 限制兩行 */
             display: -webkit-box;
             -webkit-line-clamp: 2;
             /* 顯示最多 2 行 */

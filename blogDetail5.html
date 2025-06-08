@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* outline: solid; */
+            font-family: Noto Sans TC;
+            text-decoration: none;
+            /* list-style-type: none; */
+            line-height: 1.5;
+            /* outline: auto; */
+        }
+
+        body {
+            max-width: 1920px;
+            margin: auto;
+        }
+
+        nav {
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav ul {
+            display: flex;
+            font-size: 28px;
+            line-height: 1.5;
+            justify-content: space-between;
+            font-weight: 700;
+            /* align-items: center; */
+            width: 180px;
+            list-style-type: none;
+        }
+
+
+
+        .learning {
+            display: flex;
+            max-width: 1920px;
+            justify-content: space-between;
+            /* flex-wrap: wrap; */
+        }
+
+        @media (max-width: 768px) {
+            .learning {
+                flex-wrap: wrap;
+            }
+        }
+
+        .learning .left {
+            width: 948px;
+            min-height: 640px;
+            background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog-content/About Section.png?raw=true');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        @media (max-width: 768px) {
+            .learning .left {
+                width: 100%;
+                min-height: 375px;
+                background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog-content/About Section.png?raw=true');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+
+        .learning .right {
+            max-width: 948px;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            padding-right: 120px;
+            padding-left: 24px;
+        }
+
+
+
+        @media (max-width: 768px) {
+            .learning .right {
+                padding: 48px 12px;
+            }
+        }
+
+        .learning .right .date {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .learning .right .tag {
+            display: flex;
+            align-items: center;
+        }
+
+
+        .learning .right .tag a {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .learning .right .tag span {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 700;
+            background: #0027D5;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 24px;
+            margin-left: 8px;
+        }
+
+        .learning .right h2 {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .learning .right p {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .wrap {
+            max-width: 1920px;
+            /* padding: 80px 642px; */
+            margin-top: calc(80px -28px);
+        }
+
+
+        .wrap .container {
+            max-width: 636px;
+            margin-left: auto;
+            margin-right: auto;
+            /* padding-top: 80px;
+            padding-bottom: 80px; */
+            margin-top: 48px;
+
+        }
+
+        @media (max-width: 768px) {
+            .wrap .container {
+                margin: 0;
+                padding: 64px 12px;
+            }
+        }
+
+        .wrap .container h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 24px;
+            /* margin-bottom: 24px; */
+        }
+
+        .blue {
+            color: #0027D5;
+        }
+
+        .container h3 {
+            margin-top: 24px;
+        }
+
+        .container ol {
+            padding-left: 20px;
+        }
+
+        .container.read ol {
+            margin-top: 24px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .container .note {
+            background-color: #EDEDED;
+            border-radius: 24px;
+            padding: 24px;
+            margin-top: 24px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .container.end p {
+            margin-top: 20px;
+        }
+
+        /* #4B4B4B */
+
+
+        .page {
+            display: flex;
+            justify-content: center;
+            margin-top: 48px;
+        }
+
+        .page .container {
+            width: 636px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .page .left,
+        .page .right {
+            border-radius: 40px;
+            border: 1px solid #4B4B4B;
+            padding: 8px 16px;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            width: 108px;
+            justify-content: center;
+        }
+
+        .page .left svg {
+            margin-right: 8px;
+        }
+
+        .page .right svg {
+            margin-left: 8px;
+        }
+
+
+
+        .contact {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 312px;
+            /* background-color: #0027D5; */
+            /* color: white; */
+            gap: 24px;
+            /* background: wheat; */
+        }
+
+        @media (max-width: 768px) {
+            .contact {
+                display: none;
+            }
+        }
+
+        .contact .email {
+            font-size: 32px;
+            font-weight: 500;
+        }
+
+        .contact .social {
+            display: flex;
+            align-items: center;
+        }
+
+        footer .copyright {
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="">首頁</a></li>
+            <li><a href="">部落格</a></li>
+        </ul>
+    </nav>
+    <!-- https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section.png?raw=true -->
+    <main>
+
+        <div class="learning">
+            <div class="left"></div>
+            <div class="right">
+                <div class="date">2024/10/21</div>
+                <div class="tag"><a href="">前端開發 x 職涯成長</a><a href=""></a><span>最新文章</span></div>
+                <h2>自學前端不用怕：從零開始的三大關鍵</h2>
+            </div>
+        </div>
+
+        <div class="wrap">
+            <div class="container">
+                <div>
+                    <h2 class="blue">前言</h2>
+                    <p>嗨，我是 Alyse，一名前端工程師兼職涯諮詢師。一直以來，我都很喜歡在部落格分享學習與工作心得，也常有讀者問：「我想轉職/自學前端，該從哪裡開始？」
+                        其實自學的過程既自由又具挑戰性。我整理了三大關鍵，幫助你在短期內建立紮實基礎，並快速累積實戰經驗。希望能替你的前端之路帶來一些啟發與動力！</p>
+
+
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="img">
+                    <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog-content/content1.png?raw=true"
+                        alt="">
+                </div>
+                <h2 class="blue">打好基礎：HTML、CSS、JavaScript</h2>
+                <div>
+                    <h3>HTML 與語意化</h3>
+                    <p>為何重要：HTML 是網頁結構的根基，語意化寫法（如 header, main, footer 等）能讓網頁更具可維護性與 SEO 效益。</p>
+
+                    <h4>建議做法：</h4>
+                    <ol>
+                        <li>學習常見標籤的用途與屬性，如&lt;section&gt;、&lt;article&gt;、&lt;nav&gt;。
+
+                        </li>
+                        <li>善用 MDN、W3Schools 等官方文件，找尋範例程式碼並練習。</li>
+                    </ol>
+
+                </div>
+
+                <div>
+                    <h3>CSS 佈局與預處理器</h3>
+                    <p>為何重要：好看的網站來自穩定的排版與佈局，掌握 Flexbox、Grid 能讓你隨心所欲打造響應式頁面。</p>
+                    <h4>建議做法：</h4>
+                    <ol>
+                        <li>先掌握基礎 CSS 後，再學習 SASS 或 LESS 這類預處理器，提升樣式開發效率。</li>
+                        <li>善用 <a href="">CSS-Tricks</a> 等資源，了解常見版型技巧。</li>
+                    </ol>
+
+                </div>
+                <div>
+                    <div class="note">
+                        小結：在學習基礎語法時，同步進行小專案實作（如 Todo List、計算機、切版作品集）會讓你進步更快，也能累積展示用作品。
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="container">
+                <div class="img">
+                    <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog-content/content2.png?raw=true"
+                        alt="">
+                </div>
+                <h2 class="blue">擅用主流框架與工具</h2>
+            </div>
+
+
+            <div class="container">
+                <div class="img">
+                    <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog-content/content3.png?raw=true"
+                        alt="">
+                </div>
+                <h2 class="blue">持續練習與參與社群</h2>
+            </div>
+            <div class="container end">
+                <div class="img">
+                    <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog-content/content4.png?raw=true"
+                        alt="">
+                </div>
+                <h2 class="blue">結語</h2>
+                <p>自學前端可能遇到卡關、挫折，但同時也具備很高的自主性。只要把 基礎、框架、實踐 三大面向做好，就能在前端這條路上穩步前進。若你在學習過程中需要更多建議或想要職涯諮詢，歡迎透過聯絡方式與我聯繫！</p>
+
+                <div class="note">「程式替你開路，諮詢替你指路，一起走向更寬廣的未來。」</div>
+                <p>感謝你的閱讀，如果這篇文章對你有幫助，別忘了幫忙分享，或在下方留言告訴我你的想法，也讓更多人一起受益吧！</p>
+            </div>
+
+            <div class="container read">
+                <h2 class="blue">延伸閱讀</h2>
+                <ol>
+                    <li>前端面試不再慌：破解常見提問的三大策略</li>
+                    <li>掌握前端測試：從單元測試到端對端測試的完整攻略</li>
+                    <li>SEO 與前端最佳實踐：讓搜尋引擎看見你的網站</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="page">
+            <div class="container">
+                <div class="left">
+                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M11.0311 0.468876C11.101 0.538544 11.1564 0.621308 11.1942 0.712426C11.232 0.803543 11.2515 0.901225 11.2515 0.999876C11.2515 1.09853 11.232 1.19621 11.1942 1.28733C11.1564 1.37844 11.101 1.46121 11.0311 1.53088L2.56062 9.99988L11.0311 18.4689C11.1719 18.6097 11.2511 18.8007 11.2511 18.9999C11.2511 19.199 11.1719 19.39 11.0311 19.5309C10.8903 19.6717 10.6993 19.7508 10.5001 19.7508C10.301 19.7508 10.1099 19.6717 9.96912 19.5309L0.96912 10.5309C0.899275 10.4612 0.84386 10.3784 0.806051 10.2873C0.768241 10.1962 0.748779 10.0985 0.748779 9.99988C0.748779 9.90122 0.768241 9.80354 0.806051 9.71243C0.84386 9.62131 0.899275 9.53854 0.96912 9.46888L9.96912 0.468876C10.0388 0.399031 10.1216 0.343617 10.2127 0.305807C10.3038 0.267997 10.4015 0.248535 10.5001 0.248535C10.5988 0.248535 10.6965 0.267997 10.7876 0.305807C10.8787 0.343617 10.9615 0.399031 11.0311 0.468876Z"
+                            fill="#4B4B4B" />
+                    </svg>上一頁
+                </div>
+                <div class="right">
+                    下一頁
+                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.96912 0.468876C1.03879 0.399031 1.12155 0.343617 1.21267 0.305807C1.30379 0.267997 1.40147 0.248535 1.50012 0.248535C1.59877 0.248535 1.69645 0.267997 1.78757 0.305807C1.87869 0.343617 1.96145 0.399031 2.03112 0.468876L11.0311 9.46888C11.101 9.53854 11.1564 9.62131 11.1942 9.71243C11.232 9.80354 11.2515 9.90122 11.2515 9.99988C11.2515 10.0985 11.232 10.1962 11.1942 10.2873C11.1564 10.3784 11.101 10.4612 11.0311 10.5309L2.03112 19.5309C1.89029 19.6717 1.69928 19.7508 1.50012 19.7508C1.30096 19.7508 1.10995 19.6717 0.96912 19.5309C0.82829 19.39 0.749172 19.199 0.749172 18.9999C0.749172 18.8007 0.82829 18.6097 0.96912 18.4689L9.43962 9.99988L0.96912 1.53088C0.899275 1.46121 0.84386 1.37844 0.806051 1.28733C0.768241 1.19621 0.748779 1.09853 0.748779 0.999876C0.748779 0.901225 0.768241 0.803543 0.806051 0.712426C0.84386 0.621308 0.899275 0.538544 0.96912 0.468876Z"
+                            fill="#4B4B4B" />
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="contact">
+            <div class="email">alysewang@hexschool.com</div>
+            <div class="social">
+                <a href=""><img
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/onlyIcon.png?raw=true"
+                        alt=""></a>
+                <a href=""><img
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/onlyIcon-1.png?raw=true"
+                        alt=""></a>
+                <a href=""><img
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/onlyIcon-2.png?raw=true"
+                        alt=""></a>
+                <a href=""><img
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/icons8-linkedin.png?raw=true"
+                        alt=""></a>
+                <a href=""><img
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/onlyIcon-3.png?raw=true"
+                        alt=""></a>
+            </div>
+        </div>
+        <div class="copyright">© 2025 Alyse Wang. All rights reserved.</div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>
