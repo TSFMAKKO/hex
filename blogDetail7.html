@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
         * {
@@ -20,8 +21,19 @@
 
         body {
             max-width: 1920px;
-            margin: auto;
+            margin: 0 auto;
         }
+
+        .img {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: middle;
+            /* vertical-align: baseline; */
+        }
+
 
         nav {
             height: 90px;
@@ -30,7 +42,7 @@
             justify-content: center;
         }
 
-        nav a{
+        nav a {
             color: black;
         }
 
@@ -61,6 +73,7 @@
         }
 
         .learning .left {
+            max-width: 948px;
             width: 948px;
             min-height: 640px;
             background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog-content/About Section.png?raw=true');
@@ -153,7 +166,11 @@
         }
 
         @media (max-width: 768px) {
+            .wrap{
+                width: 100%;
+            }
             .wrap .container {
+                max-width: 100%;
                 margin: 0;
                 padding: 64px 12px;
             }
@@ -170,7 +187,7 @@
             color: #0027D5;
         }
 
-        h2.Preface ~*{
+        h2.Preface+* {
             margin-top: 24px;
         }
 
@@ -178,7 +195,7 @@
             margin-top: 24px;
         }
 
-        .container h3~p {
+        .container h3+p {
             margin-top: 12px;
         }
 
@@ -190,9 +207,9 @@
             padding-left: 20px;
         }
 
-         .container ul{
+        .container ul {
             padding-left: 30px;
-         }
+        }
 
         .container.read Ul {
             margin-top: 24px;
@@ -227,11 +244,11 @@
             width: 636px;
             display: flex;
             justify-content: space-between;
-            
+
         }
 
-        @media (max-width: 768px){
-            .page .container{
+        @media (max-width: 768px) {
+            .page .container {
                 padding: 0 12px;
             }
         }
